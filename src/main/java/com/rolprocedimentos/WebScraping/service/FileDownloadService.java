@@ -1,7 +1,6 @@
 package com.rolprocedimentos.WebScraping.service;
 
 import org.springframework.stereotype.Service;
-
 import java.io.*;
 import java.net.HttpURLConnection;
 import java.net.URL;
@@ -15,7 +14,6 @@ public class FileDownloadService {
     private static final String DOWNLOAD_DIR = "downloads/";
 
     public FileDownloadService() {
-        // Criar diretório se não existir
         File directory = new File(DOWNLOAD_DIR);
         if (!directory.exists()) {
             directory.mkdirs();

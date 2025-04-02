@@ -3,9 +3,7 @@ package com.rolprocedimentos.WebScraping.service;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.List;
-
 import org.springframework.stereotype.Service;
-
 import com.opencsv.CSVWriter;
 
 @Service

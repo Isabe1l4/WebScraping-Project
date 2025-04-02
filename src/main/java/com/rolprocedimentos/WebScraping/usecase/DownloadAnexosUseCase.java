@@ -2,9 +2,7 @@ package com.rolprocedimentos.WebScraping.usecase;
 
 import java.util.List;
 import java.util.stream.Collectors;
-
 import org.springframework.stereotype.Component;
-
 import com.rolprocedimentos.WebScraping.service.FileDownloadService;
 
 @Component

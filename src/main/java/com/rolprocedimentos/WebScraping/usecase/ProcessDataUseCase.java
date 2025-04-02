@@ -1,9 +1,7 @@
 package com.rolprocedimentos.WebScraping.usecase;
 
 import java.util.List;
-
 import org.springframework.stereotype.Component;
-
 import com.rolprocedimentos.WebScraping.service.CsvService;
 import com.rolprocedimentos.WebScraping.service.DataProcessingService;
 
@@ -19,10 +17,8 @@ public class ProcessDataUseCase {
     }
 
     public void processAndSaveData(List<String[]> extractedData, String csvFilePath) {
-        // Substituir abreviações antes de salvar
         List<String[]> processedData = dataProcessingService.replaceAbbreviations(extractedData);
-
-        // Salvar no arquivo CSV
         csvService.writeCsv(csvFilePath, processedData);
+        
     }
 }

@@ -2,7 +2,6 @@ package com.rolprocedimentos.WebScraping.usecase;
 
 import com.rolprocedimentos.WebScraping.service.WebScraperService;
 import org.springframework.stereotype.Component;
-
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -17,10 +16,7 @@ public class FetchAnexosUseCase {
 
     public List<String> execute() {
         List<String> allLinks = webScraperService.getPdfLinks();
-
         System.out.println("Todos os links antes do filtro: " + allLinks);
-
-        // Filtrar apenas os anexos desejados (Anexo I e II)
         List<String> anexos = allLinks.stream()
                 .filter(link -> link.toLowerCase().contains("anexo_i") || link.toLowerCase().contains("anexo_ii"))
                 .collect(Collectors.toList());
